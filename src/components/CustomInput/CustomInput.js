@@ -42,6 +42,7 @@ export default function CustomInput(props) {
   });
   return (
     <FormControl
+      style={{ width: "40%" }}
       {...formControlProps}
       className={formControlProps.className + " " + classes.formControl}
     >

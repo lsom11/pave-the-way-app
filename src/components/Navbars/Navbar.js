@@ -3,14 +3,10 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import GridItem from "components/Grid/GridItem.js";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Hidden from "@material-ui/core/Hidden";
-// @material-ui/icons
 import Search from "@material-ui/icons/Search";
-// @material-ui/icons
-// core components
-import AdminNavbarLinks from "./AdminNavbarLinks.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-dashboard-react/components/headerStyle.js";
@@ -31,13 +27,24 @@ export default function Header(props) {
 
   return (
     <AppBar className={classes.appBar + appBarClasses}>
-      <Toolbar className={classes.container}>
-        <div className={classes.flex}>
-          <Button color="transparent" href="#" className={classes.title}>
-            Dashboard
-          </Button>
-        </div>
-        <div className={classes.searchWrapper}>
+      <Toolbar
+        className={classes.container}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <GridItem
+          xs={12}
+          sm={12}
+          md={6}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
           <CustomInput
             formControlProps={{
               className: classes.margin + " " + classes.search
@@ -60,7 +67,7 @@ export default function Header(props) {
           >
             <Search />
           </Button>
-        </div>
+        </GridItem>
       </Toolbar>
     </AppBar>
   );
