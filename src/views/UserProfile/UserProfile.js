@@ -128,6 +128,9 @@ export default function UserProfile({ person }) {
               <CardBody profile>
                 <h6 style={styles.cardTitle}>{person.position}</h6>
                 <h4 style={styles.cardTitle}>{person.name}</h4>
+                <h4 style={styles.cardTitle}>
+                  {person.topics.map(topic => topic + ", ")}
+                </h4>
                 <p style={styles.cardTitle}>{person.quote}</p>
                 <Button
                   color="primary"
