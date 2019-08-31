@@ -35,6 +35,30 @@ export default function UserProfile({ person }) {
     return (
       <div>
         <GridContainer>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card profile>
+              <CardAvatar profile>
+                <a href="#pablo" onClick={e => e.preventDefault()}>
+                  <img src={person.profilePicture} alt="..." />
+                </a>
+              </CardAvatar>
+              <CardBody profile>
+                <h6 style={styles.cardTitle}>{person.position}</h6>
+                <h4 style={styles.cardTitle}>{person.name}</h4>
+                <h4 style={styles.cardTitle}>
+                  {person.topics.map(topic => topic + ", ")}
+                </h4>
+                <p style={styles.cardTitle}>{person.quote}</p>
+                <Button
+                  color="primary"
+                  round
+                  onClick={() => window.open(person.links.twitter)}
+                >
+                  Follow
+                </Button>
+              </CardBody>
+            </Card>
+          </GridItem>
           <GridItem xs={12} sm={12} md={8}>
             <Card>
               <CardHeader color="primary">
@@ -86,7 +110,7 @@ export default function UserProfile({ person }) {
                   </GridItem>
                 </GridContainer>
                 <GridContainer>
-                  <GridItem xs={12} sm={12} md={4}>
+                  <GridItem xs={12} sm={12} md={6}>
                     <CustomInput
                       labelText="City"
                       id="city"
@@ -96,7 +120,7 @@ export default function UserProfile({ person }) {
                       value={person.city}
                     />
                   </GridItem>
-                  <GridItem xs={12} sm={12} md={4}>
+                  <GridItem xs={12} sm={12} md={6}>
                     <CustomInput
                       labelText="Country"
                       id="country"
@@ -116,30 +140,6 @@ export default function UserProfile({ person }) {
                   Go To LinkedIn
                 </Button>
               </CardFooter>
-            </Card>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card profile>
-              <CardAvatar profile>
-                <a href="#pablo" onClick={e => e.preventDefault()}>
-                  <img src={person.profilePicture} alt="..." />
-                </a>
-              </CardAvatar>
-              <CardBody profile>
-                <h6 style={styles.cardTitle}>{person.position}</h6>
-                <h4 style={styles.cardTitle}>{person.name}</h4>
-                <h4 style={styles.cardTitle}>
-                  {person.topics.map(topic => topic + ", ")}
-                </h4>
-                <p style={styles.cardTitle}>{person.quote}</p>
-                <Button
-                  color="primary"
-                  round
-                  onClick={() => window.open(person.links.twitter)}
-                >
-                  Follow
-                </Button>
-              </CardBody>
             </Card>
           </GridItem>
         </GridContainer>

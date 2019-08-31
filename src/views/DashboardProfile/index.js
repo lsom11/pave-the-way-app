@@ -24,7 +24,9 @@ export default class DashboardProfile extends Component {
     const { person } = this.state;
     return (
       <div>
-        <Navbar onSearchPerson={this.onSearchPerson} />
+        <div style={{ marginBottom: "2.5%" }}>
+          <Navbar onSearchPerson={this.onSearchPerson} />
+        </div>
         <UserProfile person={person} />
         <Dashboard person={person} />
       </div>
