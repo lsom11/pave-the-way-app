@@ -95,7 +95,7 @@ const people = {
     name: "Yury Tinos",
     email: "yury@expensemobi.com.br",
     company: "Expense Mobi",
-    position: "Enterprise Architecture",
+    position: "Enterprise Architect",
     city: "São Paulo",
     country: "Brasil",
     quote: "Tô no Tinder...",

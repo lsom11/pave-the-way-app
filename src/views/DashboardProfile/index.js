@@ -8,12 +8,13 @@ export default class DashboardProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      person: people["eric"]
+      person: people["guilherme"]
     };
   }
 
   onSearchPerson = name => {
     if (name in people) {
+      console.log(name);
       this.setState({
         person: people[name]
       });
