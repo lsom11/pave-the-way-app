@@ -20,7 +20,7 @@ const people = {
       kind: "25%",
       expressive: "45%"
     },
-    topics: ["Pianista", "Harry Potter", "CCXP", "2% Racista", "Coldplay"]
+    topics: ["Pianista", "Harry Potter", "CCXP", "Coldplay"]
   },
   guilherme: {
     profilePicture:
