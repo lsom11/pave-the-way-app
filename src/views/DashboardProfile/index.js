@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import Dashboard from "views/Dashboard/Dashboard";
 import UserProfile from "views/UserProfile/UserProfile";
 import Navbar from "components/Navbars/Navbar.js";
 import people from "./people";
 
-export default class DashboardProfile extends Component {
+export default class DashboardProfile extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,7 +14,6 @@ export default class DashboardProfile extends Component {
 
   onSearchPerson = name => {
     if (name in people) {
-      console.log(name);
       this.setState({
         person: people[name]
       });
